@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    {% if additionalCSS %}
+        {% for css in additionalCSS %}
+        <link rel="stylesheet" href="{{ css }}">
+        {% endfor %}
+    {% endif %}
+</head>
+<body>
+    <p class="theme-debug level1">base.njk</p>
+
+    {% include "partials/header.njk" %}
+
+    <main>
+
+        <p class="theme-debug level1">base.njk - before content</p>
+        {{ content | safe }}
+        <p class="theme-debug level1">base.njk - after content</p>
+        
+    </main>
+
+    {% include "partials/footer.njk" %}
+    <p class="theme-debug level1">/base.njk</p>
+</body>
+</html>

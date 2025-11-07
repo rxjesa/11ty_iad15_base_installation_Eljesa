@@ -1,0 +1,37 @@
+
+
+{# <p class="theme-debug level3">projects-list.njk</p>
+<section class="projects-section">
+    <div class="projects-grid"> #}
+        {% for project in collections.projects %}
+
+
+
+<article>
+  <div class="portfolio-text">
+    <span class="tag">Grafik</span> 
+    <h3>{{ project.data.title }}</h3>
+       
+    <p>{{ content | safe }}</p>
+
+    <a href="{{ project.url }}">Mehr Details →</a>
+  </div>
+  <div class="portfolio-image">
+    <img src="/images/1mockup.png" alt="Projektbild 2">
+  </div>
+</article>
+
+
+        {# <article class="project-card">
+            <div class="project-content">
+                <h3 class="project-title">
+                    {{ project.data.title }}
+                </h3>
+                <img src="{{ project.data.image }}" alt="{{ project.data.title }} image" class="project-image">
+                <a href="{{ project.url }}" class="project-link">go to {{ project.data.title }}</a>
+            </div>
+        </article> #}
+        {% endfor %}
+    {# </div>
+</section>
+<p class="theme-debug level3">/projects-list.njk</p> #}
